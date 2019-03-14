@@ -1,0 +1,108 @@
+/* Importar Fuentes custom */
+@font-face{
+    font-family: "yanone";
+    src: url("./fonts/yanone.ttf");
+}
+
+@font-face{
+    font-family: "finger";
+    src: url("./fonts/finger.ttf");
+}
+
+/* Generales */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: "yanone",Arial, Helvetica;
+    font-size: 20px;
+    background: url("../img/pattern.png");
+    background-attachment: fixed; /*para que el fondo se quede fijado*/
+}
+
+.clearfix{
+    float: none;
+    clear:both;
+}
+
+/* CABECERA / NAVIGATOR */
+header{
+    display: block;
+    background-color: rgba(32, 108, 250, 0.938);
+    width: 100%;
+    height: 90px;
+    position: fixed; /* me pone la barra al 100% y no se movera */
+    text-transform: uppercase;
+    
+}
+
+header ul{
+    display: block;
+    width: 50%;
+    height: inherit;
+    margin: 0px auto;
+    margin-top: -3px;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 90px;
+    
+}
+
+header a{
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: inherit;
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+}
+
+header a:hover{
+    background: rgba(0, 0, 0, 0.8);
+    color: silver;
+    transform: scale(1.10, 1.00);
+}
+
+header #logo a:hover{
+    background: transparent; /* No hace transicion negra en LOGO */
+}
+
+
+/* LOGOTIPO */
+
+#logo{
+    font-family: "finger";
+    font-size: 30px;
+}
+
+#logo a{
+    transition: color 500ms, transform 500ms;
+}
+
+#logo a:hover{
+    background: transparent;
+    color: black;
+    transform: scale(1.50, 1.50);
+}
+
+
+/* CONTENIDO */
+
+#content{
+    min-height: 500px;
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 40px black;
+    background: rgba(255, 255, 255, 0.6);
+    padding-top: 120px;
+    border-left: 1px solid #b7b7b7;
+    border-right: 1px solid #b7b7b7;
+}
