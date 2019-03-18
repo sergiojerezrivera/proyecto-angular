@@ -27,7 +27,7 @@ export class ProjectsComponent implements OnInit {
   getProjects(){
     this._projectService.getProjects().subscribe(
       response =>{
-        //console.log(response);
+        console.log(response);
         if(response.projects){
           this.projects = response.projects;
         }
