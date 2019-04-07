@@ -13,6 +13,8 @@ import { ErrorComponent } from './components/error/error.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
 
+import * as $ from "jquery";
+import { SliderComponent } from './components/slider/slider.component';
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { EditComponent } from './components/edit/edit.component';
     ContactComponent,
     ErrorComponent,
     DetailComponent,
-    EditComponent
+    EditComponent,
+    SliderComponent
     
     
   ],
