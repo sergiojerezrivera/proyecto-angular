@@ -47,7 +47,7 @@ export class EditComponent implements OnInit {
   		},
   		error => {
         //console.log(<any>error);
-        console.log("no esta entrando bien revisa el servicio");
+        console.log("This service isn't working properly, please check.");
   		}
   	)
   }

@@ -1,9 +1,9 @@
 <div class="container">
-  <h1>Contacto</h1>
+  <h4>Insert a number and press "enter" key or "Load Slider" button to show a slider width customised size in pixels</h4><br>
 
   <input type="number" [(ngModel)]="widthSlider" placeholder="insert width value" autofocus (keyup.enter)="cargarslider()">
-  <button (click)="cargarslider()">Cargar Slider</button>
-  <button (click)="resetearSlider()">Resetear Slider</button>
+  <button (click)="cargarslider()">Load Slider</button>
+  <button (click)="resetearSlider()">Reset Slider</button>
     <div *ngIf="anchuraToSlider">
       <slider [anchura]="anchuraToSlider"
               [etiquetas]="captions"
@@ -12,7 +12,7 @@
   </div>
 
   <div *ngIf="autor">
-    {{autor.nombre + "  " + autor.website}}
+    {{autor.nombre}}
   </div>
 
 </div>

@@ -30,6 +30,8 @@ export class ContactComponent implements OnInit {
 
   resetearSlider(){
     this.anchuraToSlider = null;
+    this.autor = null;
+    this.widthSlider = null;
   }
 
   getAutor(event){

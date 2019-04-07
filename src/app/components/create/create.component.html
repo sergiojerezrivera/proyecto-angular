@@ -1,47 +1,48 @@
 <div class="container" *ngIf="project">
     <h2>{{title}}</h2>
+    <h4>Using this form we will add more projects to our MongoDB database.</h4><br>
 
     <div class="message success" *ngIf="status == 'success'">
-      El proyecto se ha creado correctamente, puedes <a [routerLink]="['/proyecto', save_project._id]">verlo aqui</a>
+      Project created successfully, watch it <a [routerLink]="['/proyecto', save_project._id]">here</a>
     </div>
 
     <div class="message failed" *ngIf="status == 'failed'">
-        El proyecto no se ha podido crear
+        Project could not be created.
       </div>
 
     <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
 
       <p>
-        <label for="name">Nombre</label>
+        <label for="name">Name</label>
         <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required/>
-        <span class="form_error" *ngIf="name.touched && !name.valid">Este campo es obligatorio</span>
+        <span class="form_error" *ngIf="name.touched && !name.valid">This field is required</span>
       </p>
 
       <p>
-          <label for="description">Descripcion</label>
+          <label for="description">Description</label>
           <textarea name="description" #description="ngModel" [(ngModel)]="project.description" required></textarea>
-          <span class="form_error" *ngIf="description.touched && !description.valid">Este campo es obligatorio</span>
+          <span class="form_error" *ngIf="description.touched && !description.valid">This field is required</span>
       </p>
 
       <p>
-          <label for="category">Categoria</label>
+          <label for="category">Category</label>
           <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required/>
-          <span class="form_error" *ngIf="category.touched && !category.valid">Este campo es obligatorio</span>
+          <span class="form_error" *ngIf="category.touched && !category.valid">This field is required</span>
       </p>
 
       <p>
-          <label for="year">Anio de lanzamiento</label>
+          <label for="year">Year</label>
           <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year"/>
       </p>
       
       <p>
-          <label for="langs">Lenguajes utilizados</label>
+          <label for="langs">Languages used</label>
           <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required/>
-          <span class="form_error" *ngIf="langs.touched && !langs.valid">Este campo es obligatorio</span>
+          <span class="form_error" *ngIf="langs.touched && !langs.valid">This field is required</span>
       </p>
 
       <p>
-        <label for="image">Imagen del proyecto</label>
+        <label for="image">Project picture</label>
 
         <span class="detail-img">
           <span class="image" *ngIf="project.image" style="float:none;">
@@ -52,7 +53,7 @@
         <input type="file" name="image" placeholder="Subir imagen" (change)="fileChangeEvent($event)"/>
       </p>
       
-      <input type="submit" value="Enviar" [disabled]="!projectForm.form.valid" />
+      <input type="submit" value="Send" [disabled]="!projectForm.form.valid" />
 
     </form>
 
